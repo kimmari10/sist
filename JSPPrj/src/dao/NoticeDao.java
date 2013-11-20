@@ -7,7 +7,7 @@ import vo.Notice;
 
 public interface NoticeDao {
 	
-	public List<Notice> getNotices(int page)throws SQLException, ClassNotFoundException;
+	public List<Notice> getNotices(int page, String field, String query)throws SQLException, ClassNotFoundException;
 	public Notice getNotice(String seq) throws SQLException, ClassNotFoundException;
 	public int insert(Notice n) throws SQLException, ClassNotFoundException;
 	public int delete(String seq) throws SQLException, ClassNotFoundException;

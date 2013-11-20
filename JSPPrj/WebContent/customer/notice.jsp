@@ -66,10 +66,10 @@
 				</ul>
 				<h3 class="hidden">공지사항 목록</h3>
 				<form id="content-searchform" class="article-search-form"
-					action="notice.jsp" method="get">
+					action="notice.htm" method="get">
 					<fieldset>
 						<legend class="hidden"> 목록 검색 폼 </legend>
-						<input type="hidden" name="pg" value="" /> <label for="f"
+						<input type="hidden" name="p" value="1" /> <label for="f"
 							class="hidden">검색필드</label> <select name="f">
 							<option value="TITLE">제목</option>
 							<option value="CONTENT">내용</option>
@@ -111,14 +111,15 @@
 				<p id="cur-page" class="margin-small">
 					<span class="strong">${p }</span> / ${end} page
 				</p>
-				
+
 				<!--------------------------------- 페이지 버튼 ---------------------------->
 				<div id="pager-wrapper" class="margin-small">
 					<div class="pager clear">
 						<p id="btnPrev">
-						
+
 							<c:if test="${start > 1 }">
-								<a class="button btn-prev" href="notice.htm?p=${start-1}&f=TITLE&q=a">이전</a>
+								<a class="button btn-prev"
+									href="notice.htm?p=${start-1}&f=${f }&q=${q }">이전</a>
 							</c:if>
 							<c:if test="${start <= 1 }">
 								<span class="button btn-prev"> 이전</span>
@@ -132,10 +133,11 @@
 								<li><c:if test="${start+i >=1 && start+i<=end }">
 										<c:if test="${start+i<=end }">
 											<c:if test="${p==i+1}">
-												<a class="strong" href="notice.htm?p=${start+i }&f=TITLE&q=a">${start+i }</a>
+												<a class="strong"
+													href="notice.htm?p=${start+i }&f=${f }&q=${q }">${start+i }</a>
 											</c:if>
 											<c:if test="${p!=i+1}">
-												<a href="notice.htm?p=${start+i }&f=TITLE&q=a">${start+i }</a>
+												<a href="notice.htm?p=${start+i }&f=${f }&q=${q }">${start+i }</a>
 											</c:if>
 										</c:if>
 										<c:if test="${start+i>end}">
@@ -148,7 +150,8 @@
 
 						<p id="btnNext">
 							<c:if test="${end>=start+5 }">
-								<a class="button btn-prev" href="notice.htm?p=${start+5}&f=TITLE&q=a">다음</a>
+								<a class="button btn-prev"
+									href="notice.htm?p=${start+5}&f=TITLE&q=a">다음</a>
 							</c:if>
 							<c:if test="${end<start+5 }">
 								<span class="button btn-prev"> 다음</span>

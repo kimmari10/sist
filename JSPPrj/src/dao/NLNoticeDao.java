@@ -111,12 +111,15 @@ public class NLNoticeDao implements NoticeDao{
 	}
 
 	@Override
-	public List<Notice> getNotices(int page) throws SQLException, ClassNotFoundException 
+	public List<Notice> getNotices(int page, String field, String query) throws SQLException, ClassNotFoundException 
 	
 	{
 		int snum= 1+(page-1)*15;
 
-		String sql = "SELECT * FROM (SELECT ROWNUM NUM, N.* FROM (SELECT * FROM NOTICES ORDER BY REGDATE DESC) N)WHERE NUM BETWEEN ? AND ?";
+		String sql = "SELECT * FROM "
+				+ "(SELECT ROWNUM NUM, N.* FROM " //rownum을 가져옴
+				+ "(SELECT * FROM NOTICES WHERE "+ field +" LIKE ? ORDER BY REGDATE DESC) N)" //최신순서로 정렬
+				+ "WHERE NUM BETWEEN ? AND ?";
 		
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 		Connection con = DriverManager.getConnection(
@@ -125,8 +128,9 @@ public class NLNoticeDao implements NoticeDao{
 				"11111");
 		PreparedStatement st = con.prepareStatement(sql);
 		
-		st.setInt(1, snum);
-		st.setInt(2, snum+14);
+		st.setString(1, query);
+		st.setInt(2, snum);
+		st.setInt(3, snum+14);
 		
 		ResultSet rs = st.executeQuery();
 		

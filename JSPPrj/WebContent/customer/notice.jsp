@@ -111,11 +111,17 @@
 				<p id="cur-page" class="margin-small">
 					<span class="strong">${p }</span> / ${end} page
 				</p>
+				
+				<!--------------------------------- 페이지 버튼 ---------------------------->
 				<div id="pager-wrapper" class="margin-small">
 					<div class="pager clear">
 						<p id="btnPrev">
-							<c:if test="${p>1 }">
-								<a class="button btn-prev" href="notice.htm?p=${p-1}">이전</a>
+						
+							<c:if test="${start > 1 }">
+								<a class="button btn-prev" href="notice.htm?p=${start-1}&f=TITLE&q=a">이전</a>
+							</c:if>
+							<c:if test="${start <= 1 }">
+								<span class="button btn-prev"> 이전</span>
 							</c:if>
 						</p>
 
@@ -126,10 +132,10 @@
 								<li><c:if test="${start+i >=1 && start+i<=end }">
 										<c:if test="${start+i<=end }">
 											<c:if test="${p==i+1}">
-												<a class="strong" href="notice.htm?p=${start+i }">${start+i }</a>
+												<a class="strong" href="notice.htm?p=${start+i }&f=TITLE&q=a">${start+i }</a>
 											</c:if>
 											<c:if test="${p!=i+1}">
-												<a href="notice.htm?p=${start+i }">${start+i }</a>
+												<a href="notice.htm?p=${start+i }&f=TITLE&q=a">${start+i }</a>
 											</c:if>
 										</c:if>
 										<c:if test="${start+i>end}">
@@ -141,8 +147,11 @@
 						<!---------------------------- 페이지번호끝 ---------------------------->
 
 						<p id="btnNext">
-							<c:if test="${p<end }">
-								<a class="button btn-prev" href="notice.htm?p=${p+1}">다음</a>
+							<c:if test="${end>=start+5 }">
+								<a class="button btn-prev" href="notice.htm?p=${start+5}&f=TITLE&q=a">다음</a>
+							</c:if>
+							<c:if test="${end<start+5 }">
+								<span class="button btn-prev"> 다음</span>
 							</c:if>
 						</p>
 					</div>

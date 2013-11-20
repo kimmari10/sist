@@ -22,7 +22,7 @@
 	
 	dao.insert(n);
 	
-	response.sendRedirect("notice.jsp");
+	response.sendRedirect("notice.htm");
 	
 	
 

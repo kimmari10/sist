@@ -116,9 +116,10 @@ public class NLNoticeDao implements NoticeDao{
 	{
 		int snum= 1+(page-1)*15;
 
+		//페이지 쿼리
 		String sql = "SELECT * FROM "
-				+ "(SELECT ROWNUM NUM, N.* FROM " //rownum을 가져옴
-				+ "(SELECT * FROM NOTICES WHERE "+ field +" LIKE ? ORDER BY REGDATE DESC) N)" //최신순서로 정렬
+				+ "(SELECT ROWNUM NUM, N.* FROM " 
+				+ "(SELECT * FROM NOTICES WHERE "+ field +" LIKE ? ORDER BY REGDATE DESC) N)" 
 				+ "WHERE NUM BETWEEN ? AND ?";
 		
 		Class.forName("oracle.jdbc.driver.OracleDriver");

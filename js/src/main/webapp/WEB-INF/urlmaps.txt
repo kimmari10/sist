@@ -1,0 +1,4 @@
+/customer/notice.htm controllers.customer.NoticeController
+/customer/noticeDetail.htm controllers.customer.NoticeDetailController
+/customer/noticeEdit.htm controllers.customer.NoticeEditController
+/customer/noticeReg.htm controllers.customer.NoticeRegController

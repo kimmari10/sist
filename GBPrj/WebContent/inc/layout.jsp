@@ -11,10 +11,11 @@
 </head>
 
 <body>
-<tiles:insertAttribute name="header"/>
-<tiles:insertAttribute name="aside"/>
-<tiles:insertAttribute name="content"/>
-
+	<div id="wrapper" class="cf">
+	<tiles:insertAttribute name="header"/>
+	<tiles:insertAttribute name="aside"/>
+	<tiles:insertAttribute name="content"/>
+	</div>
 
 	
 </body>

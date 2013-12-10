@@ -2,7 +2,19 @@
 body
 {
 
-	background: #101010 url(../images/bg.png) no-repeat;
+	background: #101010;
+}
+
+#wrapper
+{
+	
+	width: 1280px;
+	height: 1080px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	background: url(../images/bg.png) no-repeat;	
+	
 }
 
 
@@ -10,42 +22,30 @@ body
 #header
 {
 	background: url(../images/headerbg.png);
-}
-
-#header
-{
 	height: 30px;
+
+}
+
+#header .logo
+{
 	text-align: center;
-	position: relative;
 }
 
-.member-menu li:first-child
-{
-	float: left;
-	padding: 10px;
+
+.member-menu
+{	
 	position: absolute;
-	top: 0px;
-	right: 40px;
-
-}
-
-.member-menu li 
-{
-	float: left;
-	padding: 10px;
-	position: absolute;
-	top: 0px;
-	right: 0px;
-
+	top: 10px;
+	right :15px;
 }
 
 /*---------nav----------*/
 
 #nav
 {
-	
+	float: left;
 	width: 240px;
-	/*height: 1080px;*/
+	height: 1050px;
 	background: url(../images/navisp.png)no-repeat right;
 }
 
@@ -58,6 +58,7 @@ body
 #menu-box
 {
 	width: 230px;
+	height: 1050px;
 	background: url(../images/navibg.png);
 }
 
@@ -76,6 +77,14 @@ body
 	margin-top: 30px;
 }
 
+#menu-box li:last-child
+{
+	position: absolute;
+	left: 10px;
+	bottom: 15px;
+
+
+}
 
 
 
@@ -88,32 +97,52 @@ body
 
 #content
 {
-	
-	width: 1032px;
+	display: block;
+	float: left;
+	width: 1040px;
 }
 
 .cate-left
 {
-	
+	width: 520px;
+}
+
+.content-nav
+{
+	height: 48px;
 }
 
 .cate-right
 {
 	
-	
 }
 
-.cate-left li
+.order
 {
-	
+	width: 520px;
 }
 
-.cate-right li
+.order > *
 {
-	
+	position: absolute;
+	top: 78px;
+	right: 15px;
 }
 
-.order li
+#pds
 {
+	background: blue;
+}
 
+#pager
+{
+	display: block;
+	text-align: center;
+	background: red url(../images/catesp.png) no-repeat;
+}
+ 
+#pager li a
+{
+	display: inline-block;
+	
 }

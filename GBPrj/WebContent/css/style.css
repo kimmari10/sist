@@ -107,6 +107,12 @@
 
 /*--------content----------*/
 
+.content-nav
+{
+	background: url(../images/catesp.png)no-repeat top;
+
+}
+
 
 #content a
 {
@@ -117,10 +123,15 @@
 	text-decoration: none;
 }
 
-#content a li
+.cate-left li,
+.cate-right li,
+.order li
 {
-	margin-left: 15px;
+	padding: 15px;
 }
+
+
+
 
 #content a:hover
 {
@@ -128,8 +139,9 @@
 }
 
 
-.cate-right
+
+
+#pager
 {
-	
 
 }

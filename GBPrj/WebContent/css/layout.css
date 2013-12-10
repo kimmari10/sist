@@ -1,0 +1,119 @@
+
+body
+{
+
+	background: #101010 url(../images/bg.png) no-repeat;
+}
+
+
+/*-----------header-------------*/
+#header
+{
+	background: url(../images/headerbg.png);
+}
+
+#header
+{
+	height: 30px;
+	text-align: center;
+	position: relative;
+}
+
+.member-menu li:first-child
+{
+	float: left;
+	padding: 10px;
+	position: absolute;
+	top: 0px;
+	right: 40px;
+
+}
+
+.member-menu li 
+{
+	float: left;
+	padding: 10px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+
+}
+
+/*---------nav----------*/
+
+#nav
+{
+	
+	width: 240px;
+	/*height: 1080px;*/
+	background: url(../images/navisp.png)no-repeat right;
+}
+
+#nav img
+{
+	margin-top: 30px;
+}
+
+
+#menu-box
+{
+	width: 230px;
+	background: url(../images/navibg.png);
+}
+
+
+
+
+#menu-box li
+{
+	padding-left: 40px;
+	margin-top: 20px;
+	
+}
+
+#menu-box li:first-child
+{
+	margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+/*-------content------------*/
+
+
+#content
+{
+	
+	width: 1032px;
+}
+
+.cate-left
+{
+	
+}
+
+.cate-right
+{
+	
+	
+}
+
+.cate-left li
+{
+	
+}
+
+.cate-right li
+{
+	
+}
+
+.order li
+{
+
+}

@@ -1,0 +1,46 @@
+top-wrapper
+{
+	margin: 30px;
+}
+
+
+#top-menu #member-menu li
+{
+	margin-right:10px;
+}
+
+#navi *
+{
+	padding-left:0px;
+	padding-right:0px;
+	text-align: center;
+}
+
+#favor-status
+{
+	text-align: center;
+	padding-top: 15px;
+}
+
+#items
+{
+
+	padding:10px;
+	border: 1px solid #ddd;
+}
+
+h1,h2,h3
+{
+	visibility: hidden;
+	height: 0px;
+}
+
+#page
+{
+	text-align: center;
+}
+
+.nav nav-tabs
+{
+	margin: 
+}

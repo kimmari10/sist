@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<nav>
+	<h1>회원가입/로그인 선택 메뉴</h1>
+		<ul>
+			<li><a href="">Register</a></li>
+			<li><a href="">Sign in</a></li>
+		</ul>
+	</nav>
+	
+	<form action="" method="post">
+		<h1>로그인 폼</h1>
+		<fieldset>
+			<legend>로그인 폼</legend>
+			<label>아이디</label> 
+			<input name="id" /><br />
+			<label>비밀번호</label> 
+			<input name="pw" /><br />
+			<label>로그인상태 유지</label>
+			<input type="checkbox" /><br />
+			<input type="submit" value="로그인">
+		</fieldset>
+	</form>
+	
+	<nav>
+	<h1>아이디/비밀번호 찾기 메뉴</h1>
+		<button  name="findID" onclick="location.href='../sign/findID.html'">아이디찾기</button>
+		<button  name="findPW" onclick="location.href='../sign/findPW.html'">비밀번호찾기</button>
+	</nav>	
+	
+</body>
+</html>

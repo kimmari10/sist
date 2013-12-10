@@ -1,0 +1,135 @@
+/*
+	배경가장어두운색 : #101010;
+	빨강 : #c70000;
+	글씨 : #ececec;
+	글씨선택 : #;
+*/
+
+.cf:before,
+ .cf:after 
+ {
+ 	content: " "; /* 1 */
+ 	display: table; /* 2 */
+ }
+
+ .cf:after 
+ {
+ 	clear: both;
+ }
+
+ .cf 
+ {
+ 	*zoom: 1;
+ }
+
+ .hr-menu li
+ {
+ 	float:left;
+ }
+
+ .hr-menu + *
+ {
+ 	clear: left;
+ }
+
+
+
+.hidden
+{
+	visibility: hidden;
+	height: 0px;
+}
+
+
+
+/*header------------------------------*/
+
+.member-menu
+{
+	color: #ececec;
+	font-family: 맑은 고딕;
+	font-size: 10px;
+	text-decoration: none;
+ 	
+}
+
+.member-menu a
+{
+	color: #ececec;
+	font-family: 맑은 고딕;
+	text-decoration: none;
+ 	
+}
+
+.member-menu li
+{
+	padding-left: 30px;
+}
+
+.member-menu li a:visited
+{
+	color: #ececec;
+ 	text-decoration: none;
+}
+
+.member-menu li a:hover
+{
+	color: #c70000;
+ 	text-decoration: none;
+}
+
+
+/*nav------------------------------*/
+
+
+#menu-box
+{
+	font-family: 맑은 고딕;
+	font-size: 14px;
+}
+
+#menu-box li,
+#menu-box li a
+{
+	color: #ececec;
+ 	text-decoration: none;
+}
+
+#menu-box li a:hover
+{
+	color: #c70000;
+}
+
+
+
+
+
+
+/*--------content----------*/
+
+
+#content a
+{
+
+	color: #ececec;
+	font-family: 맑은 고딕;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+#content a li
+{
+	margin-left: 15px;
+}
+
+#content a:hover
+{
+	color: #c70000;
+}
+
+
+.cate-right
+{
+	
+
+}

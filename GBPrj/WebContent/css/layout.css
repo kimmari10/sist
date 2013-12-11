@@ -129,9 +129,10 @@ body
 	right: 15px;
 }
 
-#pds
+.pds
 {
 	background: blue;
+	position: relative;
 }
 
 #pager
@@ -146,3 +147,28 @@ body
 	display: inline-block;
 	
 }
+
+/*----layers-----*/
+.pds
+{
+	width: 347px;
+	height: 347px;
+}
+
+
+#Layer1
+{
+	width: 347px;
+	height: 347px;
+	position: absolute;
+	left: 240px;
+	top: 125px;
+	background: yellow;
+	z-index: 1;
+	visibility:hidden;
+
+
+
+
+}
+

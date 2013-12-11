@@ -145,3 +145,21 @@
 {
 
 }
+
+/*----layers-----*/
+.pds
+{
+	
+}
+
+
+.layer
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 347px;
+	height: 347px;
+	background: skyblue;
+
+}

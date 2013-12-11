@@ -6,6 +6,24 @@
 	<link type="text/css" href="css/reset.css" rel="stylesheet" />
 	<link type="text/css" href="css/style.css" rel="stylesheet" />
 	<link type="text/css" href="css/layout.css" rel="stylesheet" />
+<script>
+  /* 시장지수 레이어 보이기 */
+ function show()
+ {
+  try{
+   Layer1.style.visibility = "visible";
+  } catch(x) {}
+ }
+ /* 시장지수 레이어 숨기기 */
+ function hide() {
+  try{
+    Layer1.style.visibility = "hidden";
+  } catch(x) {}
+ }
+</script>
+
+
+
 </head>
 
 <body>
@@ -71,18 +89,23 @@
 				</div>
 			</div>
 
-			<div id="pds" class="hr-menu cf">
+			<div class="pds hr-menu cf" onMouseOver="javascript:show()">
 				<h2 class="hidden">게시물</h2>
 				<ul>
 					<li><a href=""><img src="images/btnprev.png" width="347px" height="347px" alt="thumb-nail"></a></li>
-					<li><a href="">like</a></li>
-					<li>100</li>
-					<li><a href="">Bookmark</a></li>
-					<li>25</li>
-					<li>Title</li>
-					<li>Nickname</li>
-					<li>buyable</li>
 				</ul>
+			</div>
+			
+			<div id="Layer1" onMouseOut="javascript:hide()">
+				<p>
+					<span><a href=""><img src="images/like.png" alt="likeicon"></a>100</span>
+					<span><a href=""><img src="images/bookmark.png" alt="bookmarkicon"></a>25</span>
+				</p>
+				<p>
+					<span>title</span>
+				</p>
+				<span>nick</span>
+				<span><img src="images/saleicon.png" alt="saleicon"></span>
 			</div>
 
 

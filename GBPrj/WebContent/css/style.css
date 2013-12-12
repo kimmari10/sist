@@ -4,6 +4,11 @@
 	글씨 : #ececec;
 	글씨선택 : #;
 */
+.center
+{
+	text-align: center !important;
+}
+
 
 .cf:before,
  .cf:after 
@@ -139,27 +144,13 @@
 }
 
 
-
-
 #pager
 {
-
+	margin-top: 15px;
 }
 
-/*----layers-----*/
-.pds
+#pager li
 {
-	
-}
-
-
-.layer
-{
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	width: 347px;
-	height: 347px;
-	background: skyblue;
-
+	margin-left: 10px;
+	margin-top: 10px;
 }

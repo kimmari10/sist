@@ -137,16 +137,22 @@ body
 
 #pager
 {
-	display: block;
-	text-align: center;
-	background: red url(../images/catesp.png) no-repeat;
+	
+	background:  url(../images/catesp.png) no-repeat;
 }
- 
-#pager li a
+
+#pager ul
 {
 	display: inline-block;
-	
+	line-height: 25px;
 }
+
+#pager li
+{	
+	float:left;
+}
+
+
 
 /*----layers-----*/
 .pds
@@ -162,7 +168,7 @@ body
 	height: 347px;
 	position: absolute;
 	left: 240px;
-	top: 125px;
+	top: 124px;
 	background: yellow;
 	z-index: 1;
 	visibility:hidden;

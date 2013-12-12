@@ -1,0 +1,252 @@
+@CHARSET "UTF-8";
+@IMPORT url("../../css/layout.css");
+
+/* --< 방 크기와 위치 정하기 >-------------------------------- */
+/* .top-wrapper
+{
+	width: 960px;
+	height: inherit;
+	margin-left:auto;
+	margin-right: auto;
+}
+
+#header
+{	
+	height: 70px;
+}
+ */
+#visual
+{
+	height: 171px;	
+}
+
+#body .top-wrapper
+{
+	padding-bottom: 50px;
+}
+
+#aside
+{	
+	width:205px;
+	float:left;
+}
+
+#content
+{
+	width:720px; /* 960-205(aside)-35(padding-left) */
+	float:left;
+	padding-left: 35px;
+	padding-top: 45px;
+}
+/* 
+#footer
+{
+	clear:left;
+	height: 260px;
+} */
+
+/* --< 방 꾸미기 >------------------------------ */
+#visual
+{
+	border-top: 3px solid #8CBA34;
+	background: #3a3a3a url("../../images/bgVisual.png") no-repeat center;	
+}
+
+#visual .top-wrapper
+{	
+	background: url("../images/visual.png") no-repeat center;
+}
+
+#body
+{
+	border-top: 5px solid #8CBA34;
+	margin-top: 1px;	
+}
+
+#body .top-wrapper
+{
+	background: url("../../images/bgContent.png") repeat-y left;
+}
+
+#aside
+{
+	background: url("../../images/bgAsideTop.png") no-repeat left top;
+}
+/* 
+#footer
+{
+	background: #3a3a3a;
+} */
+
+/* --< 아이템 배치 꾸미기 >------------------------------ */
+/* 
+#header .top-wrapper
+{
+	position: relative;
+}
+
+#title
+{
+	position:absolute;
+	left:0px;
+	top:23px;
+}
+
+#pop-menu
+{
+	position:absolute;
+	left:200px;
+	top:27px;
+}
+
+#search-form
+{
+	position:absolute;
+	left:468px;
+	top:21px;
+}
+
+#member-menu
+{
+	position:absolute;
+	right:0px;
+	top:20px;
+}
+
+#customer-menu
+{
+	position:absolute;
+	right:0px;
+	top:40px;
+} */
+
+/* --<#aside >-------------------- */
+#aside .aside-title
+{
+	margin-top: 43px;	
+}
+
+#aside-menu
+{
+	margin-top: 45px;
+}
+
+#admin-aside-menu
+{
+	margin-top: 10px;
+}
+
+#admin-aside-menu .aside-menu
+{
+	margin-top: 5px;
+}
+
+#recmd-menu
+{
+	margin-top: 30px;
+}
+
+#recmd-menu ul
+{
+	margin-top: 12px;
+}
+
+/* --<#content >---------------------- */
+#content
+{
+	position: relative;
+}
+
+#breadscrumb
+{
+	position: absolute;
+	right: 0px;
+	top:57px;
+}
+
+#content .bbs-search-form
+{
+	margin-top: 49px;
+}
+
+#content .bbs-search-form > fieldset 
+{
+	text-align: right;
+}
+
+#notice-list
+{
+	margin-top: 10px;
+}
+
+
+/* ---------<.notice content>------------ */
+
+#content.notice .bbs-buttons
+{
+	text-align:right;
+}
+
+#content.notice .bbs-buttons a
+{
+	text-align:left;
+}
+
+
+/* ---------<.noticeDetail content>------------ */
+#content .bbs-buttons
+{
+	text-align: center;
+	margin-top: 10px;
+}
+
+#content.notice-detail .bbs-buttons a
+{
+
+}
+
+#content.notice-detail .bbs-detail
+{
+	margin-top: 49px;
+}
+
+
+/* ---------<.noticeEdit content>------------ */
+
+
+
+
+
+
+/* ----<.button>----- */
+
+.btn
+{
+
+	}
+
+.btn p
+{
+	
+}
+
+.btn-list
+{
+	
+}
+ 
+ .btn-edit
+ {
+ 	
+ }
+ 
+ .btn-del
+ {
+ 	
+ }
+
+
+
+
+
+

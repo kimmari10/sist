@@ -11,9 +11,10 @@
 		<li>공지사항</li>
 	</ul>
 
+<section class="bbs-detail">
 	<form action="noticeRegProc.htm" method="get">
 		<fieldset>
-			<legend>공지 필수 입력 사항</legend>
+			<legend class="hidden">공지 필수 입력 사항</legend>
 			<dl class="cf">
 				<dt>
 					<label for="title">제목</label>
@@ -27,10 +28,10 @@
 				<dd>
 					<input type="checkbox" name="type"><span>공지 고정하기</span>
 				</dd>
-				<dt>
+				<dt class="content">
 					<label for="content">공지내용</label>
 				</dt>
-				<dd>
+				<dd class="content">
 					<textarea name="content"></textarea>
 				</dd>
 				<dt>
@@ -42,10 +43,11 @@
 			</dl>
 			
 			<p>
-				<input type="submit" value="등록">
-				<a href="notice.htm">취소</a>
+				<input class="button btn-save" type="submit" value="등록">
+				<a class="button btn-cancel" href="notice.htm">취소</a>
 			</p>
 		</fieldset>
 	</form>
+	</section>
 
 </section>

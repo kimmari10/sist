@@ -277,6 +277,42 @@
 	text-overflow: elipsis;
 }
 
+.bbs-detail input[type=text],
+.bbs-detail dd textarea
+{
+	border: 1px solid #ccc;
+}
+
+
+.bbs-detail dd input[type=text],
+.bbs-detail dd input[type=file]
+{
+	width:500px;
+	height:25px;
+}
+
+.bbs-detail dd textarea
+{
+	width:500px;
+	height:100%;
+}
+
+.bbs-detail dd.content,
+.bbs-detail dt.content
+{
+	height:300px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	line-height: 300px;	
+}
+
+
+.bbs-detail dd *
+{
+	vertical-align: middle;
+}
+
+
 .bbs-detail dd.half
 {
 	width:210px;
@@ -291,12 +327,18 @@
 }
 
 
+
 /* ---------------[ buttons ] --------------- */
 .button
 {
 	display: inline-block;
 	text-indent: -999px;
 	overflow:hidden;
+	/* input=submit */
+	border:0px solid #fff;
+	vertical-align: middle;
+	cursor: pointer;
+	
 }
 
 .btn-reg
@@ -330,14 +372,17 @@
 
 .btn-save
 {
-	width:56px;
-	height:21px;
+	width:64px;
+	height:23px;
 	background: url("../images/btnSave.png")no-repeat center;
+	
 }
 
 .btn-cancel
 {
-	
+	width:64px;
+	height:23px;
+	background: url("../images/buttons.png") no-repeat -184px 0px;
 }
 
 

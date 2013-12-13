@@ -40,10 +40,10 @@
 			<a class="button btn-list" href="notice.htm">목록</a>
 		</p>
 		<p class="bbs-buttons">
-			<a class="button btn-edit" href="">수정</a>
+			<a class="button btn-edit" href="noticeEdit.htm">수정</a>
 		</p>
 		<p class="bbs-buttons">
-			<a class="button btn-del" href="">삭제</a>
+			<a class="button btn-del" href="noticeDelProc.htm">삭제</a>
 		</p>
 	</div>
 	<p>

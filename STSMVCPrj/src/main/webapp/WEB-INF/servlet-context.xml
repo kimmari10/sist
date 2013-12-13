@@ -8,7 +8,10 @@
 					http://www.springframework.org/schema/context
 					http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-	<bean name="/index.htm"  class="controllers.IndexController"/>
+<context:component-scan base-package="controllers" />
+
+
+<!-- 	<bean name="/index.htm"  class="controllers.IndexController"/>
 	<bean name="/customer/notice.htm"  class="controllers.customer.NoticeController"/>
 	<bean name="/customer/noticeDetail.htm"  class="controllers.customer.NoticeDetailController"/>
 	<bean name="/customer/noticeEdit.htm"  class="controllers.customer.NoticeEditController"/>
@@ -17,9 +20,9 @@
 	<bean name="/joinus/join.htm"  class="controllers.joinus.JoinController"/>	
 	<bean name="/joinus/login.htm"  class="controllers.joinus.LoginController"/>
 	
-	<!-- 로그인컨트롤러맵핑 -->
+	로그인컨트롤러맵핑
 	<bean name="/joinus/loginProc.htm"  class="controllers.joinus.LoginProcController"/>
-	<bean name="/joinus/logoutProc.htm"  class="controllers.joinus.LogoutProcController"/>
+	<bean name="/joinus/logoutProc.htm"  class="controllers.joinus.LogoutProcController"/> -->
 	
 	<bean 
 	class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">

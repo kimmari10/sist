@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	
+	<definition name="index" template="/WEB-INF/views/index.jsp">
+		<put-attribute name="css" value="index.css" />
+		<put-attribute name="js" value="index.js" />
+	    <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+	    <put-attribute name="body" value="/WEB-INF/views/joinus/login.jsp" />
+	    <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+	</definition>
+	
+	<definition name="admin.*" template="/WEB-INF/views/admin/inc/layout.jsp">
+		<put-attribute name="css" value="{1}.css" />
+		<put-attribute name="js" value="{1}.js" />
+	    <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+	    <put-attribute name="body" value="/WEB-INF/views/admin/{1}.jsp" />
+	    <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+	</definition>
+	
+	<definition name="joinus.*" template="/WEB-INF/views/joinus/inc/layout.jsp">
+		<put-attribute name="css" value="{1}.css" />
+		<put-attribute name="js" value="{1}.js" />
+	    <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
+	    <put-attribute name="body" value="/WEB-INF/views/joinus/{1}.jsp" />
+	    <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+	</definition>
+	
+	<definition name="*/*" template="/WEB-INF/views/{1}/inc/layout.jsp">  
+		<put-attribute name="css" value="{2}.css" /> 
+		<put-attribute name="js" value="{2}.js" />
+	    <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" /> 
+	    <put-attribute name="visual" value="/WEB-INF/views/inc/visual.jsp" />
+	    <put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp" />
+	    <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
+  </definition>
+  
+</tiles-definitions>
+
+
+
+
+
+
+
+
+
+
+ <!--  <definition name="customer.notice" template="/WEB-INF/views/layout/customerLayout.jsp">  내가 customer.notice를 요청할때 customerLayout의 
+    <put-attribute name="header" value="/WEB-INF/views/customer/header.jsp" />  body 부분에  notice.jsp를 붙여서 호출해줘
+    <put-attribute name="visual" value="/WEB-INF/views/customer/visual.jsp" />
+    <put-attribute name="body" value="/WEB-INF/views/customer/notice.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/views/customer/foote.jsp" />
+  </definition>
+  
+  <definition name="customer.noticeDetail" extends="customer.notice">//상송받아서 재정의
+   <put-attribute name="body" value="/WEB-INF/views/customer/noticeDetail.jsp" />
+  </definition>
+  
+  <definition name="customer.noticeReg" template="/WEB-INF/views/layout/customerLayout.jsp">
+   <put-attribute name="body" value="/WEB-INF/views/customer/noticeReg.jsp" />
+  </definition>
+  
+  <definition name="customer.noticeEdit" template="/WEB-INF/views/layout/customerLayout.jsp">
+   <put-attribute name="body" value="/WEB-INF/views/customer/noticeEdit.jsp" />
+  </definition>
+  
+  <definition name="joinus.login" template="/WEB-INF/views/layout/joinusLayout.jsp">
+   <put-attribute name="header" value="/WEB-INF/views/layout/header.jsp" />  body 부분에  notice.jsp를 붙여서 호출해줘
+    <put-attribute name="visual" value="/WEB-INF/views/layout/visual.jsp" />
+    <put-attribute name="body" value="/WEB-INF/views/joinus/notice.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/views/layout/foote.jsp" />
+   
+  </definition> -->
+  
+<!-- </tiles-definitions>  --><!-- page를 잘라놓고 그걸 합쳐주는 녀석이 tiles .. 여기는 tiles보고 페이지들 붙여달라고 할것임-->
+<!-- controller가 부를수있는건 jsp랑 tiles가 있음!! -->

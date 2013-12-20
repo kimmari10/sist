@@ -1,0 +1,199 @@
+@CHARSET "UTF-8";
+@IMPORT url("../../css/style.css");
+
+/* --<관리자 페이지 버튼들>--------------------------------- */
+.btn-admin
+{
+	font-size:12px;
+	width:60px;
+	height: 18px;
+	line-height:18px;
+	text-align:center;
+	vertical-align: middle;
+	border:1px solid #939393;
+	display: inline-block;
+	text-decoration: none;
+	color:#000;
+	cursor: pointer;
+}
+/* ------------------------------------------------------ */
+.member-search-form
+{
+	border:1px solid #939393;
+}
+
+/* ==<memberList.jsp>========================================== */
+
+/* --<.member-search-form>--------------------------------------------------------- */
+#content.memberList .content-sub-title
+{
+	margin-top : 20px;
+	padding-left: 10px;
+}
+
+#content.memberList .member-search-form
+{
+	margin-top: 5px;
+	height: 70px;
+	line-height: 70px;
+}
+
+#content.memberList .member-search-form input,
+#content.memberList .member-search-form select
+{
+	height : 20px;
+	vertical-align: middle;
+}
+
+#content.memberList .member-search-form label
+{
+	font-family:굴림;
+	font-size:11px;
+	margin-left:20px;
+}
+
+#content.memberList .member-search-form select
+{
+	margin-left: 10px;
+}
+
+#content.memberList .member-search-form input[type="submit"]
+{
+	width:70px;	
+}
+
+#content.memberList .member-search-form input[type="date"]
+{
+	width:100px;
+	margin:10px;
+}
+
+/* --<.member-modify-form table>-------------------------------------------------------- */
+#content.memberList .member-modify-form
+{
+	margin-top: 20px;
+	font-size : 12px;
+}
+
+#content.memberList .member-modify-form .count
+{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#content.memberList .member-modify-form .error
+{
+	margin-top:10px;	
+	border:1px solid #ff0000;
+	padding:10px;
+	width:700px; /* 720-20 */
+	height:auto;	
+	font-size: 11px;
+	color:#ff0000;
+}
+
+#content.memberList .member-modify-form .count span
+{
+	color : #00f00f;
+}
+
+#content.memberList .member-modify-form .role-modify
+{
+	margin-top:10px;
+}
+
+#content.memberList .member-modify-form table
+{	
+	margin-top:10px;
+	width:720px;
+	border: 1px solid #939393;	
+}
+
+#content.memberList .member-modify-form thead th,
+#content.memberList .member-modify-form tbody td
+{
+	text-align:center;
+	line-height:20px;
+	height:20px;
+	border-bottom: 1px solid #939393;
+	border-right: 1px solid #939393;
+	
+	/* 범위를 벗어나는 경우 */	
+	display: inline-block;
+	float:left;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+}
+
+#content.memberList .member-modify-form thead th
+{
+	background: #e9e9e9;
+}
+
+/* #content.memberList .member-modify-form thead th:last-child
+{
+	border-right: 0px solid #939393;
+}
+
+#content.memberList .member-modify-form tbody td:last-child
+{
+	border-bottom: 0px solid #939393;
+	
+} */
+
+#content.memberList .member-modify-form .sel
+{
+	width:40px;
+}
+
+#content.memberList .member-modify-form .sel input
+{	
+	vertical-align: middle;	
+}
+
+#content.memberList .member-modify-form .uid
+{
+	width:190px;
+}
+
+#content.memberList .member-modify-form .role
+{
+	width:80px;
+}
+
+#content.memberList .member-modify-form .regdate
+{
+	width:80px;
+}
+
+#content.memberList .member-modify-form .gender
+{
+	width:80px;
+}
+
+#content.memberList .member-modify-form .birth
+{
+	width:80px;
+}
+#content.memberList .member-modify-form .last
+{
+	width:80px;
+}
+
+#content.memberList .member-modify-form .phone
+{
+	width:80px;
+}
+
+#content.memberList .member-modify-form .buttons
+{
+	margin-top:10px;
+	font-size: 11px;
+	height: 20px;	
+}
+
+#content.memberList .member-modify-form .buttons span + span
+{
+	margin-left:230px;
+}

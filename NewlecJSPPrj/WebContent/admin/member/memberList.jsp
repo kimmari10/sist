@@ -1,62 +1,11 @@
 <%@page import="java.util.List"%>
-<%@page import="dao.NLMemberDao"%>
-<%@page import="dao.MemberDao"%>
-<%@page import="vo.Member"%>
+<%@page import="com.newlecture.mvcprj.dao.NLMemberDao"%>
+<%@page import="com.newlecture.mvcprj.dao.MemberDao"%>
+<%@page import="com.newlecture.mvcprj.vo.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <% 
-	MemberDao m = new NLMemberDao();
-
-	String q = request.getParameter("q"); 
-	String f = request.getParameter("f");
-	String p = request.getParameter("p");
-	String s = request.getParameter("sday");
-	String e = request.getParameter("eday");
-	int pnum=1;
-	String field ="Uid";
-	String query ="%%";
-	String	eday="2013-12-20";
-	String	sday="2000-12-20";
 	
-	
-	if(f != null)
-		field = f;
-	if(q != null)
-		query = q;
-	if(p != null)
-		pnum = Integer.parseInt(p);
-	if(s != null)
-		sday = s;
-	if(e != null)
-		eday = e;
-	
-	if(request.getMethod().equals("POST"))
-	{
-		
-		String[] uids = request.getParameterValues("uid");
-
-		System.out.println(uids[0]);
-		
-		if(request.getParameter("active")!=null)
-		{
-			System.out.println("active");
-			for(String uid: uids)
-				m.activity(uid, true);
-		}
-		if(request.getParameter("inactive")!=null)
-		{
-			System.out.println("active");
-			for(String uid: uids)
-				m.activity(uid, false);
-		}
-		
-	
-	}
-	
-	
-	List<Member> list= m.getMembers(pnum, field, query, eday, sday);
-	pageContext.setAttribute("list",list);
-
 %>
 <!DOCTYPE html>
 <html>
@@ -184,26 +133,27 @@
 		            <li>전체회원</li>
 		        </ul>
 		        <h3 class="content-sub-title">멤버 검색</h3>
-		        <form class="member-search-form" action="memberList.jsp" method="post">
+		        <form class="member-search-form" action="memberList.jsp" method="get">
 		            <fieldset>
 		                <legend class="hidden">공지사항 검색필드</legend>
 		                <label class="hidden" for="f">분류선택</label>
 		                <label for="q">검색어</label>
 		                <select name="f">
-		                    <option value="uid">아이디</option>
-		                    <option value="name">이름</option>
+		                
+		                    <option <c:if test="${field!=uid }">selected="selected"</c:if> value="uid">아이디</option>
+		                    <option <c:if test="${field!=name }">selected="selected"</c:if> value="name">이름</option>
 		                </select>		                
-		                <input type="text" name="q" value="" placeholder="검색어를 입력하세요" />
+		                <input type="text" name="q" value="${query }" placeholder="검색어를 입력하세요" />
 		                <input type="submit" value="검색" />
-		                <input type="date" name="sday" />~<input type="date" name="eday" />
+		                <input type="date" name="sd" value="${sday }"/>~<input type="date" name="ed" value="${eday }" />
 		            </fieldset>
 		        </form>		        
 		        <h3 class="hidden">검색 목록</h3>		        
-		        <form action="memberList.jsp" method="POST" class="member-modify-form">		        	
+		        <form action="memberList.jsp" method="post" class="member-modify-form">		        	
 		        	<fieldset>
 		        		<legend class="hidden">멤버 역할을 위한 컬럼</legend>
 		        		<p class="count">검색된 회원 수 <span>30</span></p>		        		
-			        	<p class="error">오류 : 오류 내용이 없습니다.</p>
+			        	<p class="error <c:if test="${empty param.err }">hidden</c:if>">오류 : 하나이상의 회원을 선택해야 합니다.</p>
 			        	<p class="role-modify">
 			        	선택된 멤버를
 			        	<select name="role">
@@ -250,6 +200,15 @@
 			        	</p>
 			        </fieldset>
 		        </form>
+		        
+		        <ul>
+		        	<li><a href="memberList.jsp?p=1&q=${query }&f=${field }&sd=${sday }&ed=${eday}">1</a></li>
+		        	<li><a href="memberList.jsp?p=2&q=${query }&f=${field }&sd=${sday }&ed=${eday}">2</a></li>
+		        	<li><a href="memberList.jsp?p=3&q=${query }&f=${field }&sd=${sday }&ed=${eday}">3</a></li>
+		        	<li><a href="memberList.jsp?p=4&q=${query }&f=${field }&sd=${sday }&ed=${eday}">4</a></li>
+		        	<li><a href="memberList.jsp?p=5&q=${query }&f=${field }&sd=${sday }&ed=${eday}">5</a></li>
+		        	<li><a href="memberList.jsp">홈</a></li>
+		        </ul>
 		        
 		
 		        

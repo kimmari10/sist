@@ -36,7 +36,7 @@ body
 {	
 	position: absolute;
 	top: 10px;
-	right :15px;
+	right :30px;
 }
 
 /*---------nav----------*/
@@ -46,7 +46,7 @@ body
 	float: left;
 	width: 240px;
 	height: 1050px;
-	background: url(../images/navisp.png)no-repeat right;
+	background: url(../images/navisp.png)repeat-y right;
 }
 
 #nav img
@@ -67,9 +67,9 @@ body
 
 #menu-box li
 {
-	padding-left: 40px;
-	margin-top: 20px;
-	
+	margin-left: 20px;
+	padding: 15px 0px 15px 20px;
+
 }
 
 #menu-box li:first-child
@@ -77,10 +77,13 @@ body
 	margin-top: 30px;
 }
 
-#menu-box li:last-child
+#menu-box p
 {
+	color: #ececec;
+	font-weight: bold;
+	font-family: 맑은 고딕;
 	position: absolute;
-	left: 10px;
+	left: 50px;
 	bottom: 15px;
 
 
@@ -135,11 +138,7 @@ body
 	position: relative;
 }
 
-#pager
-{
-	
-	background:  url(../images/catesp.png) no-repeat;
-}
+
 
 #pager ul
 {
@@ -154,27 +153,53 @@ body
 
 
 
-/*----layers-----*/
-.pds
+/*-----gallery-----*/
+
+#gallery .entry-content
 {
-	width: 347px;
-	height: 347px;
+	
+	margin: 15px;
+	
+}
+
+#gallery .entry-content .thumbnail
+{
+	position: relative;
 }
 
 
-#Layer1
+#gallery .entry-content .caption .like
 {
-	width: 347px;
-	height: 347px;
 	position: absolute;
-	left: 240px;
-	top: 124px;
-	background: yellow;
-	z-index: 1;
-	visibility:hidden;
+	left: 55px;
+	top: 25px;
+}
 
+#gallery .entry-content .caption .bookmark
+{
+	position: absolute;
+	right: 55px;
+	top: 25px;
+}
 
+#gallery .entry-content .caption .title
+{
+	position: absolute;
+	left: 35px;
+	bottom: 60px;
+}
 
+#gallery .entry-content .caption .writer
+{
+	position: absolute;
+	left: 35px;
+	bottom:25px;
+}
 
+#gallery .entry-content .caption .buyable-icon
+{
+	position: absolute;
+	right: 25px;
+	bottom:25px;
 }
 

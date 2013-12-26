@@ -6,22 +6,7 @@
 	<link type="text/css" href="css/reset.css" rel="stylesheet" />
 	<link type="text/css" href="css/style.css" rel="stylesheet" />
 	<link type="text/css" href="css/layout.css" rel="stylesheet" />
-<script>
-  /* 시장지수 레이어 보이기 */
- function show()
- {
-  try{
-   Layer1.style.visibility = "visible";
-  } catch(x) {}
- }
- /* 시장지수 레이어 숨기기 */
- function hide() {
-  try{
-    Layer1.style.visibility = "hidden";
-  } catch(x) {}
- }
-</script>
-
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 
 
 </head>
@@ -47,12 +32,12 @@
 				<ul>
 					<li><a href="">HOME</a></li>
 					<li><a href="">MESSAGE</a></li>
-					<li class="select-menu"><a href="">bookmark</a></li>
+					<li class="select-menu"><a href="">BOOKMARK</a></li>
 					<li><a href="">NOTICE</a></li>
 					<li><a href="">FAQ</a></li>
 					<li><a href="">WRITE</a></li>
-					<li>ⓒ 2013 TROLLER</li>
 				</ul>	
+				<p>ⓒ 2013 TROLLER</p>
 			</div>
 		</aside>
 		<section id="content">
@@ -62,7 +47,7 @@
 			<div class="cate-right hr-menu cf">
 				<h1 class="hidden">카테고리</h1>
 				<ul>
-					<li class="select-menu"><a href="">All</a></li>
+					<li class="select-cate"><a href="">All</a></li>
 					<li><a href="">Bag</a></li>
 					<li><a href="">Wallet</a></li>
 					<li><a href="">Mobile</a></li>
@@ -75,7 +60,7 @@
 				<div class="cate-left hr-menu cf">
 					<h2 class="hidden">분류</h2>
 					<ul>
-						<li class="select-txt"><a href="">Products</a></li>
+						<li class="select-cate"><a href="">Products</a></li>
 						<li><a href="">Shops</a></li>
 					</ul>
 				</div>
@@ -84,34 +69,75 @@
 				<div class="order hr-menu cf">
 					<h2 class="hidden">정렬</h2>
 					<ul>
-						<li><a href="">Newest</a></li>
-						<li class="select-txt"><a href="">MostPopular</a></li>
+						<li class="select-cate"><a href="">Newest</a></li>
+						<li><a href="">MostPopular</a></li>
 					</ul>
 				</div>
 			</div>
 
-			<div class="hr-menu cf" >
-				<h2 class="hidden">게시물</h2>
-				<ul>
-					<li onMouseOver="javascript:show()"><a href=""><img src="images/btnprev.png" width="340px" height="340px" alt="thumb-nail"></a></li>
-					<li><a href=""><img src="images/btnprev.png" width="340px" height="340px" alt="thumb-nail"></a></li>
-					<li><a href=""><img src="images/btnprev.png" width="340px" height="340px" alt="thumb-nail"></a></li>
-				</ul>
-			</div>
+
+
+
+
 			
-			<div id="Layer1" onMouseOut="javascript:hide()">
-				<p>
-					<span><a href=""><img src="images/like.png" alt="likeicon"></a>100</span>
-					<span><a href=""><img src="images/bookmark.png" alt="bookmarkicon"></a>25</span>
-				</p>
-				<p>
-					<span>title</span>
-				</p>
-				<span>nick</span>
-				<span><img src="images/saleicon.png" alt="saleicon"></span>
-			</div>
+			<ul id="gallery" class="hr-menu cf">
+				<li class="entry-content">
+					<div class="thumbnail">
+						<a class="item" href=""><img src="images/pds/1.jpg"></a> 
+						<div class="caption">
+							<div class="like cf">
+								<div><a href=""><img src="images/like.png" alt="likeicon"></a></div>
+								<div>1212</div>
+							</div>
 
+							<div class="bookmark cf">
+								<div><a href=""><img src="images/bookmark.png" alt="bookmarkicon"></a></div>
+								<div>11</div>
+							</div>
 
+							<div class="title">
+								<div>title</div>
+							</div>
+
+							<div class="writer">
+								<div>writer</div>
+							</div>
+							<div class="buyable-icon">
+								<img src="images/saleicon.png" alt="saleicon">
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="entry-content">
+					<div class="thumbnail">
+						<a class="item" href=""><img src="images/pds/2.jpg"></a> 
+						<div class="caption">
+							<div class="like cf">
+								<div><a href=""><img src="images/like.png" alt="likeicon"></a></div>
+								<div>1212</div>
+							</div>
+
+							<div class="bookmark cf">
+								<div><a href=""><img src="images/bookmark.png" alt="bookmarkicon"></a></div>
+								<div>11</div>
+							</div>
+
+							<div class="title">
+								<div>title</div>
+							</div>
+
+							<div class="writer">
+								<div>writer</div>
+							</div>
+							<div class="buyable-icon">
+								<img src="images/saleicon2.png" alt="saleicon">
+							</div>
+						</div>
+					</div>
+				</li>
+				
+			</ul>
+			
 			<div id="pager" class="hr-menu cf center">
 				<ul>
 					<li><a href=""><img src="images/btnprev.png" alt="prev"></a></li>
@@ -129,6 +155,45 @@
 		</section>
 
 	</div>
-</body>
 
+<center>
+	<table>
+		<tr>
+			<td>ㅇ</td><td>ㅇ</td><td>ㅇ</td><td>ㅇ</td><td>ㅇ</td>
+		</tr>
+	</table>
+</center>
+	
+
+
+
+	<!-- aside 스크립트 -->
+	<script type="text/javascript"> 
+		$(document).ready(function() {
+			$('#menu-box li').mouseenter(function(){
+				$(this).css('background','#c70000');
+
+			}),
+			$('#menu-box li').mouseleave(function(){
+				$(this).css('background','');
+
+			})
+		});
+	</script>
+
+	<!-- content hover 스크립트 -->
+	<script type="text/javascript"> 
+		$(document).ready(function() {
+			$('#gallery li .caption').mouseenter(function(){
+				$(this).css('opacity','1');
+
+			}),
+			$('#gallery li .caption').mouseleave(function(){
+				$(this).css('opacity','0');
+
+			})
+		});
+	</script>
+
+</body>
 </html>

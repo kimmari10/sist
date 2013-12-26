@@ -46,6 +46,18 @@
 }
 
 
+.select-menu
+{
+	background: #c70000;
+}
+
+ .select-cate a
+ { 
+ 	
+ 	color: #c70000 !important;
+ }
+
+
 
 /*header------------------------------*/
 
@@ -102,8 +114,10 @@
 
 #menu-box li a:hover
 {
-	color: #c70000;
+	color: #fff;
 }
+
+
 
 
 
@@ -140,12 +154,15 @@
 
 #content a:hover
 {
+
 	color: #c70000;
 }
 
 
 #pager
 {
+
+	background: url(../images/catesp.png)no-repeat top;
 	margin-top: 15px;
 }
 
@@ -153,4 +170,48 @@
 {
 	margin-left: 10px;
 	margin-top: 10px;
+}
+
+
+/*---------gallery-------*/
+
+.entry-content .caption .like div,
+.entry-content .caption .bookmark div
+{
+	float: left;
+}
+
+.entry-content .thumbnail .item img
+{
+
+	width: 340px;
+	height: 340px;
+}
+
+
+#gallery .entry-content .caption
+{
+	color: #fff;
+	font-weight: bold;
+	font-family: 맑은 고딕;
+	width:340px;
+	height:340px;
+	position: absolute;
+	left: 0px;
+	top:0px;
+	background: url(../images/select.png)no-repeat;
+	opacity: 0;
+
+}
+
+
+
+table tr
+{
+	background: url(../images/catesp.png);
+}
+
+table td
+{
+	width: 200px;
 }

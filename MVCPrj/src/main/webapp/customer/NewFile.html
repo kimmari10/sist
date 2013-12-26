@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div style="background-color: #CCC; width:300px; overflow:hidden; ">
+    <!-- Padding-Bottom is equal to 100% of the container's size, Margin-bottom hides everything beyond
+         the container equal to the container size. This allows the column to grow with the largest
+         column. -->
+    <div style="float: left;width: 100px; background:yellow; padding-bottom:100%; margin-bottom:-100%;">column a</div>
+    <div style="float: left;width: 100px;  background:#09F;">column b<br />Line 2<br />Line 3<br />Line 4<br />Line 5</div>
+    <div style="float:left; width:100px; background: yellow; padding-bottom:100%; margin-bottom:-100%;">Column C</div>
+    <div style="clear: both;"></div>
+</div>
+<div style="float:none;background:#FDD017;" class="clearfix">
+    <div id="response" style="float:left; width:65%;">Response with two lines</div>
+    <div id="note" style="float:left; width:35%;">single line note</div>
+</div>
+</body>
+</html>

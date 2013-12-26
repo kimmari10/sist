@@ -21,7 +21,7 @@ public class AdminController {
 	@RequestMapping(value={"/admin/member/memberList"}, method=RequestMethod.GET)
 	public String memberList(String q, String f, String p, String s, String e, Model md) throws ClassNotFoundException, SQLException
 	{
-		
+		Object o = 1;
 		int pnum=1;
 		String field ="name";
 		String query ="";
